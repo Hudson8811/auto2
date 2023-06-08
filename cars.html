@@ -2389,540 +2389,501 @@
 
 
 
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- Формы -->
+<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-	<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-	<!-- Формы -->
-	<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-	<!-- Сообщение об отправке -->
-	<div class="d-none">
-		<button data-fancybox data-src="#request_message" id="btn_request_message"></button>
-		<div class="popup-form call-request" id="request_message">
-			<p class="request_text">Спасибо! Наши менеджеры скоро свяжутся с вами!</p>
-		</div>
+<!-- Сообщение об отправке -->
+<div class="d-none">
+	<button data-fancybox data-src="#request_message" id="btn_request_message"></button>
+	<div class="popup-form call-request" id="request_message">
+		<p class="request_text">Спасибо! Наши менеджеры скоро свяжутся с вами!</p>
 	</div>
+</div>
 
-	<!-- Попап - Анти-бот -->
-	<div style="display: none;" class="popup-form call-request city_pop1" id="check-popup">
-		<div class="popup-form__wrap">
-			<div class="popup-form__form">
-				<p class="popup-form__title">
-					Ваш город Москва
-				</p>
-				<div class="popup-form__btn red-btn" id="button_yes_city_check" style="margin-bottom: 10px;">
-					Да
-				</div>
-				<div class="popup-form__btn red-btn" id="button_no_city_check">
-					Нет
-				</div>
-
+<!-- Попап - Анти-бот -->
+<div style="display: none;" class="popup-form call-request city_pop1" id="check-popup">
+	<div class="popup-form__wrap">
+		<div class="popup-form__form">
+			<p class="popup-form__title">
+				Ваш город Москва
+			</p>
+			<div class="popup-form__btn red-btn" id="button_yes_city_check" style="margin-bottom: 10px;">
+				Да
 			</div>
+			<div class="popup-form__btn red-btn" id="button_no_city_check">
+				Нет
+			</div>
+
 		</div>
 	</div>
+</div>
 
-	<!-- Попап - Заказать звонок -->
-	<div style="display: none;" class="popup-form call-request" id="callback-form">
-		<div class="popup-form__wrap">
-			<form class="popup-form__form order-form" action="/local/templates/auto.2020/include/forms/ajax_callback.php"
-				method="POST">
-				<p class="popup-form__title">
-					Заказать звонок
-				</p>
-				<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
-				<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
-				<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
-					style="display:none">
-				<div class="text-danger" id="recaptchaError"></div>
-
-
-				<input name="ip" type="hidden" value="127.0.0.1">
-				<input name="sms_t" type="hidden" value="">
-				<input name="err_fm" type="hidden" value="1">
-				<input name="url" type="hidden" value="">
-				<input name="url_full" type="hidden" value="avantaauto.ru/cars/">
-
-				<button class="popup-form__btn red-btn" type="submit">
-					Отправить
-				</button>
-				<div class="popup-form__checkbox button-checkbox">
-					<input checked type="checkbox" id="cb_call-request">
-					<label for="cb_call-request">
-						Даю согласие на обработку персональных данных
-					</label>
-				</div>
+<!-- Попап - Заказать звонок -->
+<div style="display: none;" class="popup-form call-request" id="callback-form">
+	<div class="popup-form__wrap">
+		<form class="popup-form__form order-form" action="/local/templates/auto.2020/include/forms/ajax_callback.php"
+			method="POST">
+			<p class="popup-form__title">
+				Заказать звонок
+			</p>
+			<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
+			<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
+			<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
+				style="display:none">
+			<div class="text-danger" id="recaptchaError"></div>
 
 
-				<div class="popup-form__checkbox button-checkbox">
-					<input checked type="checkbox" id="cb_moscow_call-request" class="cb_moscow">
-					<label for="cb_moscow_call-request">
-						Я понимаю, что автосалон находится в Москве
-					</label>
-				</div>
+			<input name="ip" type="hidden" value="127.0.0.1">
+			<input name="sms_t" type="hidden" value="">
+			<input name="err_fm" type="hidden" value="1">
+			<input name="url" type="hidden" value="">
+			<input name="url_full" type="hidden" value="avantaauto.ru/">
 
+			<button class="popup-form__btn red-btn" type="submit">
+				Отправить
+			</button>
+			<div class="popup-form__checkbox button-checkbox">
+				<input checked type="checkbox" id="cb_call-request">
+				<label for="cb_call-request">
+					Даю согласие на обработку персональных данных
+				</label>
+			</div>
 
-			</form>
-		</div>
+		</form>
 	</div>
+</div>
 
-	<!-- Попап - Забронировать/Купить -->
-	<div style="display: none;" class="popup-form book-popup" id="reserve-form1">
-		<div class="popup-form__wrap">
-			<form class="popup-form__form order-form" action="/local/templates/auto.2020/include/forms/ajax_reserve.php"
-				method="POST">
-				<p class="popup-form__title"></p>
-				<input name="brand" type="text" class="popup-form__input brand-input" placeholder="Марка" value="" readonly>
-				<input name="model" type="text" class="popup-form__input model-input" placeholder="Модель" value=""
-					readonly>
-				<input name="equip" type="text" class="popup-form__input equip-input" placeholder="Комплектация" value=""
-					readonly>
-				<input name="price" type="text" class="popup-form__input price-input" placeholder="Цена" value="" readonly>
-				<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
-				<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
-				<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
-					style="display:none">
+<!-- Попап - Забронировать/Купить -->
+<div style="display: none;" class="popup-form book-popup" id="reserve-form1">
+	<div class="popup-form__wrap">
+		<form class="popup-form__form order-form" action="/local/templates/auto.2020/include/forms/ajax_reserve.php"
+			method="POST">
+			<p class="popup-form__title"></p>
+			<input name="brand" type="text" class="popup-form__input brand-input" placeholder="Марка" value="" readonly>
+			<input name="model" type="text" class="popup-form__input model-input" placeholder="Модель" value="" readonly>
+			<input name="equip" type="text" class="popup-form__input equip-input" placeholder="Комплектация" value=""
+				readonly>
+			<input name="price" type="text" class="popup-form__input price-input" placeholder="Цена" value="" readonly>
+			<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
+			<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
+			<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
+				style="display:none">
 
-				<input name="ip" type="hidden" value="127.0.0.1">
-				<input name="sms_t" type="hidden" value="">
-				<input name="err_fm" type="hidden" value="1">
-				<input name="url_ref" type="hidden" value="">
-				<input name="url_full" type="hidden" value="avantaauto.ru/cars/">
-
-
-				<p class="popup-form__title_2">
-					Удобное время звонка
-				</p>
-				<select class="rsm_calc calc__select modal-select-new" name="time" id="">
+			<input name="ip" type="hidden" value="127.0.0.1">
+			<input name="sms_t" type="hidden" value="">
+			<input name="err_fm" type="hidden" value="1">
+			<input name="url_ref" type="hidden" value="">
+			<input name="url_full" type="hidden" value="avantaauto.ru/">
 
 
-					<option value="0">0:00</option>
-					<option value="1">1:00</option>
-					<option value="2">2:00</option>
-					<option value="3">3:00</option>
-					<option value="4">4:00</option>
-					<option value="5">5:00</option>
-					<option value="6">6:00</option>
-					<option value="7" selected>7:00</option>
-					<option value="8">8:00</option>
-					<option value="9">9:00</option>
-					<option value="10">10:00</option>
-					<option value="11">11:00</option>
-					<option value="12">12:00</option>
-					<option value="13">13:00</option>
-					<option value="14">14:00</option>
-					<option value="15">15:00</option>
-					<option value="16">16:00</option>
-					<option value="17">17:00</option>
-					<option value="18">18:00</option>
-					<option value="19">19:00</option>
-					<option value="20">20:00</option>
-					<option value="21">21:00</option>
-					<option value="22">22:00</option>
-					<option value="23">23:00</option>
+			<div class="text-danger" id="recaptchaError"></div>
+			<button class="popup-form__btn red-btn" type="submit">
+				Отправить
+			</button>
+			<div class="popup-form__checkbox button-checkbox">
+				<input checked type="checkbox" id="cbc1">
+				<label for="cbc1">
+					Даю согласие на обработку персональных данных
+				</label>
+			</div>
 
 
 
-				</select>
-
-
-				<div class="text-danger" id="recaptchaError"></div>
-				<button class="popup-form__btn red-btn" type="submit">
-					Отправить
-				</button>
-				<div class="popup-form__checkbox button-checkbox">
-					<input checked type="checkbox" id="cb3">
-					<label for="cb3">
-						Даю согласие на обработку персональных данных
-					</label>
-				</div>
-
-
-				<div class="popup-form__checkbox button-checkbox">
-					<input checked type="checkbox" id="cb_moscow_reserve" class="cb_moscow">
-					<label for="cb_moscow_reserve">
-						Я понимаю, что автосалон находится в Москве
-					</label>
-				</div>
-
-
-			</form>
-		</div>
+		</form>
 	</div>
+</div>
 
-	<!-- Новый поп-ап - Забронировать/Купить -->
-	<div style="display:none;" class="modal_popup_new" id="reserve-form">
-		<div style="">
-			<form class="order-form" action="/local/templates/auto.2020/include/forms/ajax_reserve.php" method="POST">
-				<span class="popup-form__title popup-form__title-new-modal">
-					Заявка на <br class="for-m"> <span class="brand-input"></span><br class="for-d"> <span
-						class="equip-input"></span></span>
-				<div class="modal__row modal__row_nomb mobile-modal-row">
-					<div class="modal__col modal__col_center modal__col-new-mob">
-						<img src="" alt="" data-img-hover="" data-img-default="">
-						<span class="price-input"
-							style="font-size:20px;margin-bottom:10px;font-weight: 600;font-family: 'Proxima Nova', sans-serif"></span>
-						<div class="modal__devider"></div>
-						<span class="desk-new-modal"><a href="tel:+74951208816">+7 (495) 120-88-16</a></span>
+<!-- Новый поп-ап - Забронировать/Купить -->
+<div style="display:none;" class="modal_popup_new" id="reserve-form">
+	<div style="">
+		<form class="order-form" action="/local/templates/auto.2020/include/forms/ajax_reserve.php" method="POST">
+			<span class="popup-form__title popup-form__title-new-modal">
+				Заявка на <br class="for-m"> <span class="brand-input"></span><br class="for-d"> <span
+					class="equip-input"></span></span>
+			<div class="modal__row modal__row_nomb mobile-modal-row">
+				<div class="modal__col modal__col_center modal__col-new-mob">
+					<img src="" alt="" data-img-hover="" data-img-default="">
+					<span class="price-input"
+						style="font-size:20px;margin-bottom:10px;font-weight: 600;font-family: 'Proxima Nova', sans-serif"></span>
+					<div class="modal__devider"></div>
+					<span class="desk-new-modal"><a href="tel:+74951208816">+7 (495) 120-88-16</a></span>
+				</div>
+				<div class="modal__col modal__col-new-mob">
+					<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
+					<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
+					<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
+						style="display:none">
+
+					<input name="ip" type="hidden" value="127.0.0.1">
+					<input name="sms_t" type="hidden" value="">
+					<input name="url_ref" type="hidden" value="">
+					<input name="url_full" type="hidden" value="avantaauto.ru/">
+
+
+					<div class="text-danger" id="recaptchaError"></div>
+					<button class="popup-form__btn red-btn" type="submit">
+						Отправить
+					</button>
+					<div class="popup-form__checkbox button-checkbox">
+						<input checked type="checkbox" id="cbc2">
+						<label for="cbc2">
+							Даю согласие на обработку персональных данных
+						</label>
 					</div>
-					<div class="modal__col modal__col-new-mob">
-						<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя"
-							required>
-						<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
-						<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
-							style="display:none">
 
-						<input name="ip" type="hidden" value="127.0.0.1">
-						<input name="sms_t" type="hidden" value="">
-						<input name="url_ref" type="hidden" value="">
-						<input name="url_full" type="hidden" value="avantaauto.ru/cars/">
-
-
-						<p class="popup-form__title_2">
-							Удобное время звонка
-						</p>
-						<select class="rsm_calc calc__select modal-select-new" name="time" id="">
-
-
-							<option value="0">0:00</option>
-							<option value="1">1:00</option>
-							<option value="2">2:00</option>
-							<option value="3">3:00</option>
-							<option value="4">4:00</option>
-							<option value="5">5:00</option>
-							<option value="6">6:00</option>
-							<option value="7" selected>7:00</option>
-							<option value="8">8:00</option>
-							<option value="9">9:00</option>
-							<option value="10">10:00</option>
-							<option value="11">11:00</option>
-							<option value="12">12:00</option>
-							<option value="13">13:00</option>
-							<option value="14">14:00</option>
-							<option value="15">15:00</option>
-							<option value="16">16:00</option>
-							<option value="17">17:00</option>
-							<option value="18">18:00</option>
-							<option value="19">19:00</option>
-							<option value="20">20:00</option>
-							<option value="21">21:00</option>
-							<option value="22">22:00</option>
-							<option value="23">23:00</option>
-
-
-
-						</select>
-
-
-						<div class="text-danger" id="recaptchaError"></div>
-						<button class="popup-form__btn red-btn" type="submit">
-							Отправить
-						</button>
-						<div class="popup-form__checkbox button-checkbox">
-							<input checked type="checkbox" id="cb3">
-							<label for="cb3">
-								Даю согласие на обработку персональных данных
-							</label>
-						</div>
-
-
-						<div class="popup-form__checkbox button-checkbox">
-							<input checked type="checkbox" id="cb_moscow_reserve" class="cb_moscow">
-							<label for="cb_moscow_reserve">
-								Я понимаю, что автосалон находится в Москве
-							</label>
-						</div>
-
-
-			</form>
-		</div>
-		<button style="padding: 10px;right: 0;top: 0;" type="button" data-fancybox-close=""
-			class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1"
-				viewBox="0 0 24 24">
-				<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
-			</svg></button>
+		</form>
 	</div>
+	<button style="padding: 10px;right: 0;top: 0;" type="button" data-fancybox-close=""
+		class="fancybox-button fancybox-close-small" title="Close"><svg xmlns="http://www.w3.org/2000/svg" version="1"
+			viewBox="0 0 24 24">
+			<path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path>
+		</svg></button>
+</div>
 
 
-	<!-- Попап - Такси купить в кредит -->
-	<div style="display: none;" class="popup-form book-popup" id="taxi-reserve-form">
-		<div class="popup-form__wrap">
-			<form class="popup-form__form order-form"
-				action="/local/templates/auto.2020/include/forms/ajax_reserve_taxi.php" method="POST">
-				<p class="popup-form__title">
-					Купить такси в кредит
-				</p>
+<!-- Попап - Такси купить в кредит -->
+<div style="display: none;" class="popup-form book-popup" id="taxi-reserve-form">
+	<div class="popup-form__wrap">
+		<form class="popup-form__form order-form" action="/local/templates/auto.2020/include/forms/ajax_reserve_taxi.php"
+			method="POST">
+			<p class="popup-form__title">
+				Купить такси в кредит
+			</p>
 
-				<input name="taxi-auto" type="text" class="popup-form__input taxi-auto-input" placeholder="Машина" value=""
-					readonly>
-				<input name="price" type="text" class="popup-form__input price-input" placeholder="Цена" value="" readonly>
-				<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
-				<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
-				<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
-					style="display:none">
-				<input name="ip" type="hidden" value="127.0.0.1">
-				<input name="sms_t" type="hidden" value="">
-				<input name="url_ref" type="hidden" value="">
-				<input name="url_full" type="hidden" value="avantaauto.ru/cars/">
-				<div class="text-danger" id="recaptchaError"></div>
-				<button class="popup-form__btn red-btn" type="submit">
-					Отправить
-				</button>
-				<div class="popup-form__checkbox button-checkbox">
-					<input checked type="checkbox" id="cb3">
-					<label for="cb3">
-						Даю согласие на обработку персональных данных
-					</label>
-				</div>
-
-
-				<div class="popup-form__checkbox button-checkbox">
-					<input checked type="checkbox" id="cb_moscow_taxi-popup" class="cb_moscow">
-					<label for="cb_moscow_taxi-popup">
-						Я понимаю, что автосалон находится в Москве
-					</label>
-				</div>
+			<input name="taxi-auto" type="text" class="popup-form__input taxi-auto-input" placeholder="Машина" value=""
+				readonly>
+			<input name="price" type="text" class="popup-form__input price-input" placeholder="Цена" value="" readonly>
+			<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
+			<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
+			<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
+				style="display:none">
+			<input name="ip" type="hidden" value="127.0.0.1">
+			<input name="sms_t" type="hidden" value="">
+			<input name="url_ref" type="hidden" value="">
+			<input name="url_full" type="hidden" value="avantaauto.ru/">
+			<div class="text-danger" id="recaptchaError"></div>
+			<button class="popup-form__btn red-btn" type="submit">
+				Отправить
+			</button>
+			<div class="popup-form__checkbox button-checkbox">
+				<input checked type="checkbox" id="c3">
+				<label for="c3">
+					Даю согласие на обработку персональных данных
+				</label>
+			</div>
 
 
-			</form>
-		</div>
+		</form>
 	</div>
+</div>
 
-	<!-- Попап - Trade-in -->
-	<div style="display: none;" class="popup-form book-popup" id="trade-in-form">
-		<div class="popup-form__wrap">
-			<form class="popup-form__form order-form" action="/local/templates/auto.2020/include/forms/ajax_tradein.php"
-				method="POST">
-				<p class="popup-form__title">
-					Обмен авто
-				</p>
+<!-- Попап - Trade-in -->
+<div style="display: none;" class="popup-form book-popup" id="trade-in-form">
+	<div class="popup-form__wrap">
+		<form class="popup-form__form order-form" action="/local/templates/auto.2020/include/forms/ajax_tradein.php"
+			method="POST">
+			<p class="popup-form__title">
+				Обмен авто
+			</p>
 
-				<input name="brand" type="text" class="popup-form__input" placeholder="Марка" required>
-				<input name="model" type="text" class="popup-form__input" placeholder="Модель" required>
+			<input name="brand" type="text" class="popup-form__input" placeholder="Марка" required>
+			<input name="model" type="text" class="popup-form__input" placeholder="Модель" required>
 
-				<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
-				<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
+			<input name="name" type="text" maxlength="40" class="popup-form__input" placeholder="Ваше Имя" required>
+			<input name="phone" type="tel" class="popup-form__input" placeholder="7 (___) ___-__-__" required>
 
-				<input class="popup-form__input odometer" type="number" name="odometer" placeholder="Пробег">
-				<input class="popup-form__input year" type="number" name="year" placeholder="Год">
-				<input class="popup-form__input price" type="number" name="price" placeholder="Ваша Цена">
-				<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
-					style="display:none">
+			<input class="popup-form__input odometer" type="number" name="odometer" placeholder="Пробег">
+			<input class="popup-form__input year" type="number" name="year" placeholder="Год">
+			<input class="popup-form__input price" type="number" name="price" placeholder="Ваша Цена">
+			<input name="sms_k" type="text" class="popup-form__input" placeholder="Введите код из СМС"
+				style="display:none">
 
-				<input name="ip" type="hidden" value="127.0.0.1">
-				<input name="sms_t" type="hidden" value="">
-				<input name="err_fm" type="hidden" value="1">
-				<input name="url_ref" type="hidden" value="">
-				<input name="url_full" type="hidden" value="avantaauto.ru/cars/">
+			<input name="ip" type="hidden" value="127.0.0.1">
+			<input name="sms_t" type="hidden" value="">
+			<input name="err_fm" type="hidden" value="1">
+			<input name="url_ref" type="hidden" value="">
+			<input name="url_full" type="hidden" value="avantaauto.ru/">
 
-				<button class="popup-form__btn red-btn" type="submit">
-					Отправить
-				</button>
-				<div class="popup-form__checkbox button-checkbox">
-					<input checked type="checkbox" id="cb3">
-					<label for="cb3">
-						Даю согласие на обработку персональных данных
-					</label>
-				</div>
+			<button class="popup-form__btn red-btn" type="submit">
+				Отправить
+			</button>
+			<div class="popup-form__checkbox button-checkbox">
+				<input checked type="checkbox" id="b3">
+				<label for="b3">
+					Даю согласие на обработку персональных данных
+				</label>
+			</div>
 
-
-				<div class="popup-form__checkbox button-checkbox">
-					<input checked type="checkbox" id="cb_moscow_trade-in" class="cb_moscow">
-					<label for="cb_moscow_trade-in">
-						Я понимаю, что автосалон находится в Москве
-					</label>
-				</div>
-
-
-			</form>
-		</div>
+		</form>
 	</div>
-
-	<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-	<!-- Меню Футер -->
-	<!-------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
-	<!-- calltouch -->
-	<!-- calltouch -->
+</div>
 
 
-	<!-- End Facebook Pixel Code -->
-
-	<!-- BEGIN JIVOSITE CODE {literal} -->
-
-	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript"
-		src="/bitrix/js/main/jquery/jquery-1.12.4.min.js?166063122497163"></script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript"
-		src="/bitrix/cache/js/s1/auto.2020/template_899ca4c1ecf09775b8df99b942387457/template_899ca4c1ecf09775b8df99b942387457_v1.js?1685959167267045"></script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript"
-		src="/bitrix/cache/js/s1/auto.2020/page_bec001b6103353f4ff9956bb7b5b52b7/page_bec001b6103353f4ff9956bb7b5b52b7_v1.js?168579052727452"></script>
-	<script
-		type="9d47712db1762af48c9dbe5e-text/javascript">var _ba = _ba || []; _ba.push(["aid", "98774825e6acd85aa17efae18dcbf80b"]); _ba.push(["host", "avantaauto.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
 
 
-	<script type="9d47712db1762af48c9dbe5e-text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-   ym(85932958, "init", {
-        clickmap:true,
-        trackLinks:true,
-        accurateTrackBounce:true,
-        webvisor:true
-   });
+
+
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-1.12.4.min.js?166063122497163"></script>
+<script type="text/javascript"
+	src="/bitrix/cache/js/s1/auto.2020/template_899ca4c1ecf09775b8df99b942387457/template_899ca4c1ecf09775b8df99b942387457_v1.js?1685959167267045"></script>
+<script type="text/javascript"
+	src="/bitrix/cache/js/s1/auto.2020/page_d3ad219e96bb375d24351886c9be8835/page_d3ad219e96bb375d24351886c9be8835_v1.js?168579055129016"></script>
+<script
+	type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "98774825e6acd85aa17efae18dcbf80b"]); _ba.push(["host", "avantaauto.ru"]); (function () { var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true; ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ba, s); })();</script>
+
+
+<script type="text/javascript">
+	(function (m, e, t, r, i, k, a) {
+		m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+		m[i].l = 1 * new Date(); k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+	})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+	ym(85932958, "init", {
+		clickmap: true,
+		trackLinks: true,
+		accurateTrackBounce: true,
+		webvisor: true
+	});
 </script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript" async src="/utm-js.php"></script>
+<script type="text/javascript" async src="/utm-js.php"></script>
 
 
 
 
 
 
-	<script type="9d47712db1762af48c9dbe5e-text/javascript">
-var _tmr = window._tmr || (window._tmr = []);
-_tmr.push({id: "3237506", type: "pageView", start: (new Date()).getTime()});
-(function (d, w, id) {
-  if (d.getElementById(id)) return;
-  var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-  ts.src = "https://top-fwz1.mail.ru/js/code.js";
-  var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-  if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-})(document, window, "topmailru-code");
+<script type="text/javascript">
+	var _tmr = window._tmr || (window._tmr = []);
+	_tmr.push({ id: "3237506", type: "pageView", start: (new Date()).getTime() });
+	(function (d, w, id) {
+		if (d.getElementById(id)) return;
+		var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+		ts.src = "https://top-fwz1.mail.ru/js/code.js";
+		var f = function () { var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s); };
+		if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+	})(document, window, "topmailru-code");
 </script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript" src="/local/templates/auto.2019/js/cookie.js"></script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript"
-		src="/local/templates/auto.2019/js/script-to-add.js"></script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript"
-		src="/local/templates/auto.2020/js/bootstrap.bundle.min.js"></script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript">
-     $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-     })
-     </script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript">
-        (function (d, w) {
-            var n = d.getElementsByTagName("script")[0],
-                s = d.createElement("script");
-            s.type = "text/javascript";
-            s.async = true;
-            s.src = "https://qoopler.ru/index.php?ref="+d.referrer+"&page=" + encodeURIComponent(w.location.href);
-            n.parentNode.insertBefore(s, n);
-        })(document, window);
-    </script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript">
-    // Смена фото модели
-    $('.hit-card').hover(
-
-        function() {
-            img_auto = $(this).find('.hit-card__img img');
-            img_hover_src = img_auto.data('img-hover');
-
-            img_auto.attr('src', img_hover_src);
-        },
-
-        function() {
-            img_auto = $(this).find('.hit-card__img img');
-            img_default_src = img_auto.data('img-default');
-
-            img_auto.attr('src', img_default_src);
-        }
-    );
+<script type="text/javascript" src="/local/templates/auto.2019/js/cookie.js"></script>
+<script type="text/javascript" src="/local/templates/auto.2019/js/script-to-add.js"></script>
+<script type="text/javascript" src="/local/templates/auto.2020/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip()
+	})
 </script>
-
-
-
-	<script type="9d47712db1762af48c9dbe5e-text/javascript">
-	// Ползунки - цена
+<script type="text/javascript">
+		(function (d, w) {
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script");
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://qoopler.ru/index.php?ref=" + d.referrer + "&page=" + encodeURIComponent(w.location.href);
+			n.parentNode.insertBefore(s, n);
+		})(document, window);
+</script>
+<script type="text/javascript">
 	$(".choose-range__slide").slider({
 		animate: "slow",
 		range: "max",
 		min: 300000,
 		max: 7000000,
-		step: 50000,
+		step: 100000,
 		value: 2000000,
-		slide: function(event, ui) {
-			$(".choose-range .choose-range-start").text('до ' + ui.value.toLocaleString() + ' р'); // для отображения
-			$(".choose-range input[name=price]").val(ui.value); // для формы
+		slide: function (event, ui) {
+			$("#choose .choose-range-start").text('до ' + ui.value.toLocaleString() + ' р'); // для отображения
+			//$("#choose #price_from").val(ui.value); // для формы
+			$("#choose .choose-range__btn").attr('href', '/search/' + 'auto-do-' + ui.value + '-rub/'); // для адреса ссылки
 		}
 	});
-	$(".choose-range .choose-range-start").text( 'до ' + ($(".choose-range__slide").slider('value').toLocaleString()) + ' р' );
+	$("#choose .choose-range-start").text('до ' + ($(".choose-range__slide").slider('value').toLocaleString()) + ' р');
+</script>
+
+<script type="text/javascript">
+	// Смена фото модели
+	$('.hit-card').hover(
+
+		function () {
+			img_auto = $(this).find('.hit-card__img img');
+			img_hover_src = img_auto.data('img-hover');
+
+			img_auto.attr('src', img_hover_src);
+		},
+
+		function () {
+			img_auto = $(this).find('.hit-card__img img');
+			img_default_src = img_auto.data('img-default');
+
+			img_auto.attr('src', img_default_src);
+		}
+	);
 </script>
 
 
-	<script type="9d47712db1762af48c9dbe5e-text/javascript"
-		src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-	<script type="9d47712db1762af48c9dbe5e-text/javascript">
-        $('.menu-title-footer').click(function() {
 
-			var parent = $(this).parent();
+<script type="text/javascript">
+	// Смена фото модели
+	$('.hit-card').hover(
 
-            if ($(this).hasClass('menu-collapse')) {
+		function () {
+			img_auto = $(this).find('.hit-card__img img');
+			img_hover_src = img_auto.data('img-hover');
 
-				parent.find('.footer-body__menu-item:not(:first-child)').hide(200);
+			img_auto.attr('src', img_hover_src);
+		},
 
-            } else {
-				parent.find('.footer-body__menu-item:not(:first-child)').show(200);
-            }
+		function () {
+			img_auto = $(this).find('.hit-card__img img');
+			img_default_src = img_auto.data('img-default');
 
-            $(this).toggleClass('menu-collapse');
-            return false;
-        });
+			img_auto.attr('src', img_default_src);
+		}
+	);
+</script>
+
+
+
+<script type="text/javascript">
+	// Цена
+	$("#tradein .choose-price").slider({
+		animate: "slow",
+		range: "min",
+		min: 0,
+		max: 2500000,
+		step: 20000,
+		value: 300000,
+		slide: function (event, ui) {
+			$("#tradein .price-range-start").text(ui.value.toLocaleString()); // для отображения
+			$("#tradein .price").val(ui.value.toLocaleString()); // для формы
+		}
+	});
+	$("#tradein .price-range-start").text($("#tradein .choose-price").slider("value").toLocaleString());
+
+	// Пробег
+	$("#tradein .choose-odometer").slider({
+		animate: "slow",
+		range: "min",
+		min: 0,
+		max: 300000,
+		step: 10000,
+		value: 100000,
+		slide: function (event, ui) {
+			$("#tradein .odometer-range-start").text(ui.value.toLocaleString()); // для отображения
+			$("#tradein .odometer").val(ui.value.toLocaleString()); // для формы
+		}
+	});
+	$("#tradein .odometer-range-start").text($("#tradein .choose-odometer").slider("value").toLocaleString());
+
+	// Год
+	$("#tradein .choose-year").slider({
+		animate: "slow",
+		range: "min",
+		min: 1990,
+		max: 2020,
+		step: 1,
+		value: 2005,
+		slide: function (event, ui) {
+			$("#tradein .year-range-start").text(ui.value); // для отображения
+			$("#tradein .year").val(ui.value); // для формы
+		}
+	});
+	$("#tradein .year-range-start").text($("#tradein .choose-year").slider("value"));
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script type="text/javascript">
+	$('.menu-title-footer').click(function () {
+
+		var parent = $(this).parent();
+
+		if ($(this).hasClass('menu-collapse')) {
+
+			parent.find('.footer-body__menu-item:not(:first-child)').hide(200);
+
+		} else {
+			parent.find('.footer-body__menu-item:not(:first-child)').show(200);
+		}
+
+		$(this).toggleClass('menu-collapse');
+		return false;
+	});
 </script>
 
 
 
 
 
-	<script type="9d47712db1762af48c9dbe5e-text/javascript">
-    if (window.navigator.userAgent) {
-        if (window.navigator.userAgent.search(/Google Page Speed Insights|Chrome-Lighthouse/is) === -1) {
+<script type="text/javascript">
+	if (window.navigator.userAgent) {
+		if (window.navigator.userAgent.search(/Google Page Speed Insights|Chrome-Lighthouse/is) === -1) {
 
-            (function (w, d, n, c) {
-                w.CalltouchDataObject = n;
-                w[n] = function () {
-                    w[n]["callbacks"].push(arguments)
-                };
-                if (!w[n]["callbacks"]) {
-                    w[n]["callbacks"] = []
-                }
-                w[n]["loaded"] = false;
-                if (typeof c !== "object") {
-                    c = [c]
-                }
-                w[n]["counters"] = c;
-                for (var i = 0; i < c.length; i += 1) {
-                    p(c[i])
-                }
+			(function (w, d, n, c) {
+				w.CalltouchDataObject = n;
+				w[n] = function () {
+					w[n]["callbacks"].push(arguments)
+				};
+				if (!w[n]["callbacks"]) {
+					w[n]["callbacks"] = []
+				}
+				w[n]["loaded"] = false;
+				if (typeof c !== "object") {
+					c = [c]
+				}
+				w[n]["counters"] = c;
+				for (var i = 0; i < c.length; i += 1) {
+					p(c[i])
+				}
 
-                function p(cId) {
-                    var a = d.getElementsByTagName("script")[0], s = d.createElement("script"), i = function () {
-                        a.parentNode.insertBefore(s, a)
-                    };
-                    s.type = "text/javascript";
-                    s.async = true;
-                    s.src = "https://mod.calltouch.ru/init.js?id=" + cId;
-                    if (w.opera == "[object Opera]") {
-                        d.addEventListener("DOMContentLoaded", i, false)
-                    } else {
-                        i()
-                    }
-                }
-            })(window, document, "ct", "r9kv98bc");
-        }
-    }
+				function p(cId) {
+					var a = d.getElementsByTagName("script")[0], s = d.createElement("script"), i = function () {
+						a.parentNode.insertBefore(s, a)
+					};
+					s.type = "text/javascript";
+					s.async = true;
+					s.src = "https://mod.calltouch.ru/init.js?id=" + cId;
+					if (w.opera == "[object Opera]") {
+						d.addEventListener("DOMContentLoaded", i, false)
+					} else {
+						i()
+					}
+				}
+			})(window, document, "ct", "r9kv98bc");
+		}
+	}
 </script>
-	<script src="//code.jivo.ru/widget/DHr8Zt0ZEj" async type="9d47712db1762af48c9dbe5e-text/javascript"></script>
+<script src="//code.jivo.ru/widget/DHr8Zt0ZEj" async type="text/javascript"></script>
 
 
 
 
-	<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js"
-		data-cf-settings="9d47712db1762af48c9dbe5e-|49" defer=""></script>
-	<script defer
-		src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
-		integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
-		data-cf-beacon='{"rayId":"7d3e7b10ce4cb47c","token":"7d33d493d7b94215a8eb5dc73a846095","version":"2023.4.0","si":100}'
-		crossorigin="anonymous"></script>
+<script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="|49" defer=""></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
+	integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
+	data-cf-beacon='{"rayId":"7d32a4de8f0eb47c","token":"7d33d493d7b94215a8eb5dc73a846095","version":"2023.4.0","si":100}'
+	crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
