@@ -1,0 +1,330 @@
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+	display: block;
+}
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	text-align: left;
+	background-color: #fff;
+}
+body {
+	font: 400 1.4rem 'Oswald' !important;
+	color: #000;
+}
+a,
+a:hover,
+a:active,
+a:focus,
+button,
+button:hover,
+button:active,
+button:focus {
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+
+
+
+
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+button {
+	border-radius: 0;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+button,
+input {
+	overflow: visible;
+}
+button,
+select {
+	text-transform: none;
+}
+[type=button],
+[type=reset],
+[type=submit],
+button {
+	-webkit-appearance: button;
+}
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+	cursor: pointer;
+}
+button,
+input,
+select,
+textarea {
+	margin: 0;
+}
+button,
+input[type=button] {
+	width: auto;
+	overflow: visible;
+}
+a,
+button {
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+a,
+a:hover,
+a:active,
+a:focus,
+button,
+button:hover,
+button:active,
+button:focus {
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+}
+button {
+	background-color: transparent;
+	border: none;
+	text-align: center;
+	padding: 0;
+}
+a,
+a:active,
+button,
+button:active {
+	outline: none !important;
+}
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled),
+button:not(:disabled) {
+	cursor: pointer;
+}
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+img,
+object,
+embed {
+	max-width: 100%;
+}
+a:not([href]):not([tabindex]) {
+	color: inherit;
+	text-decoration: none;
+}
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+	display: block;
+}
+ul {
+	list-style: none;
+}
+
+a,
+a:active,
+button,
+button:active {
+	outline: none !important;
+}
+
+
+h3 {
+	font-weight: 700;
+	font-size: 2.6rem;
+}
+h3 {
+	font-weight: 700 !important;
+	font-size: 2.6rem !important;
+}
+
+h5 {
+	font-size: 1.6rem;
+}
+h5 {
+	font-size: 1.6rem !important;
+}
+
+
+
+*,
+::after,
+::before {
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html {
+	overflow-y: scroll;
+}
+html {
+	font-size: 10px;
+}
+@media (max-width: 575.98px) {
+	html {
+		font-size: 9px;
+	}
+}
+input[type="checkbox"] {
+	vertical-align: bottom;
+}
+.button-checkbox input:checked,
+.button-checkbox input:not(:checked) {
+	position: absolute;
+	left: -9999px;
+}
+input[type=checkbox],
+input[type=radio] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+button,
+input,
+select,
+textarea {
+	margin: 0;
+}
+
+select,
+input,
+textarea {
+	font: 99% sans-serif;
+}
+
+
+h4 {
+	font: 600 1.8rem 'Proxima Nova', sans-serif !important;
+}
+
+
+
+
+
+
+
+
