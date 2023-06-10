@@ -78,7 +78,7 @@ $(document).ready(function(){
 			$('.header-slider').attr('style', 'display:none;')
 		});
 
-		$('.header-slider .header-slider__slider').slick({
+		/* $('.header-slider .header-slider__slider').slick({
 			dots: false,
 			arrows: false,
 			infinite: true,
@@ -87,7 +87,7 @@ $(document).ready(function(){
 			verticalSwiping: true,
 			speed: 500,
 			autoplaySpeed: 5000,
-		});
+		}); */
 
 	});
 });

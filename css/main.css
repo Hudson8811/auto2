@@ -3104,7 +3104,23 @@ button:not(:disabled) {
 
 
 
-
+.hit-card__title a:hover,
+.similar-card a:hover,
+.diffs-card__head a:hover {
+	color: #fff !important;
+	text-decoration: underline !important;
+	text-decoration-color: tomato !important;
+}
+.hit-card__btn:first-child:hover {
+	border-color: #CF103C;
+	color: #fff;
+	background-color: #b30e34 !important;
+}
+.hit-card__btn:nth-child(2):hover {
+	border-color: #000;
+	color: #fff;
+	background-color: #303030;
+}
 /* ----------------------------------------------------------contacts */
 .contacts {
 	padding-top: 15px;
@@ -3368,12 +3384,12 @@ button:not(:disabled) {
 		-webkit-box-direction: normal;
 		-ms-flex-direction: column;
 		flex-direction: column;
-		margin-left: 20%;
+		/* margin-left: 20%; */
 	}
 }
 @media (max-width: 420px) {
 	.company-model__list {
-		margin-left: 10%;
+		/* margin-left: 10%; */
 	}
 }
 
@@ -4190,7 +4206,9 @@ element.style {}
 
 
 
-
+.sort_menu a.red {
+	color: #CF103C !important;
+}
 
 
 

@@ -206,6 +206,196 @@ $(document).ready(function(){
 			],
 		});
 	});
+	
+	var $page = $('html, body');
+	$('.car-table a[href*="#"]').click(function() {
+		$page.animate({
+			scrollTop: $($.attr(this, 'href')).offset().top
+		}, 500);
+		return false;
+	});
+
+	// Ховер для боковых кнопок
+	$('.btn-request').hover(function() {
+		$(this).closest('.buttons').find('.btn-request-hover').addClass('hovered');
+	}, function() {
+		$(this).closest('.buttons').find('.btn-request-hover').removeClass('hovered');
+	})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//============================================================================================================
+	// Маска
+	//============================================================================================================
+	// $('[name=name]').keyup(function () {
+	// 	let reg = /[a-zA-Z0-9()]/g;
+	// 	if (this.value.search(reg) != -1) {
+	// 		this.value = this.value.replace(reg, '');
+	// 	}
+	// });
+	var options = {
+
+		onChange: function(cep) {
+			if ((cep[3] != 9) && (cep[3] != '')) {
+					$("input[name='phone']").css({
+						'color': '#ff0000'
+					});
+			} else {
+					$("input[name='phone']").css({
+						'color': 'inherit'
+					});
+			}
+		}
+	};
+	$('[name=phone]').mask('7 (000) 000-00-00', options);
+
+	// Маска для формы Онлайн Кредит
+	$('[name=surname], [name=middle_name], [name=former_surname], [name=Full_name_wife], [name=Maiden_name_wife], [name=Full_name_head_organization], [name=Full_name_contact_person_1], [name=Full_name_contact_person_2]').keyup(function() {
+		let reg = /[a-zA-Z0-9()]/g;
+		if (this.value.search(reg) != -1) {
+			this.value = this.value.replace(reg, '');
+		}
+	});
+
+	$('[name=Phone_wife], [name=Phone_head_organization], [name=Human_resources_phone_organization], [name=Phone_contact_person_1], [name=Phone_contact_person_2]').mask('0 (000) 000-00-00', {
+		clearIfNotMatch: true
+	});
+	$('[name=Series_passport], [name=Series_prev_passport], [name=Series_driver_license]').mask('00 00', {
+		clearIfNotMatch: true
+	});
+	$('[name=Number_passport], [name=Number_prev_passport], [name=Number_driver_license]').mask('000 000', {
+		clearIfNotMatch: true
+	});
+	$('[name=International_passport]').mask('00 00 000 000', {
+		clearIfNotMatch: true
+	});
+	$('[name=Date_birth], [name=Date_birth_wife], [name=Registration_date], [name=Date_passport], [name=Date_prev_passport], [name=Date_driver_license]').mask('00.00.0000', {
+		clearIfNotMatch: true
+	});
+	$('[name=Unit_code_passport], [name=Unit_code_prev_passport]').mask('000-000', {
+		clearIfNotMatch: true
+	});
+	$('[name=Average_monthly_income_family], [name=Additional_income_family]').mask('000 000 р', {
+		reverse: true
+	});
+	$('[name=Driving_experience], [name=Work_experience_in_organization], [name=Seniority]').mask('00 лет (года)', {
+		reverse: true
+	});
+
+
+
+
+
+
+	//============================================================================================================
+	// Формы
+	//============================================================================================================
+
+	$('.btn-reserve-new').on('click', function() {
+
+	$('#reserve-form .popup-form__title .brand-input').text($(this).attr('data-brand') + ' ' + $(this).attr('data-model'));
+		// Передаем Бренд в форму
+		//$('#rezerv-17-01-22 .popup-form__title .model-input').text($(this).attr('data-model')); // Передаем Модель в форму
+		let carImage = $(this).attr('data-img');
+		if (carImage) {
+			$('#reserve-form img').attr('src', carImage);
+		}
+		if (!!$(this).attr('data-equip')) {
+			$('#reserve-form .equip-input').val($(this).attr('data-equip'));
+			// Передаем Комплектацию в форму
+		} else {
+			$('#reserve-form .equip-input').hide();
+		}
+
+		if (!!$(this).attr('data-price')) {
+			$('#reserve-form .price-input').text($(this).attr('data-price'));
+			// Передаем Цену в форму
+		} else {
+			$('#reserve-form .price-input').hide();
+		}
+
+	});
+	// Кнопка отправка формы -Резерв
+	$('.btn-reserve, .button-adv-new, hit-card__btn, red-btn-hit, hot-card__btn-red').on('click', function() {
+
+		console.log('reserver-click');
+		$('#reserve-form .popup-form__title .brand-input').text($(this).attr('data-brand') + ' ' + $(this).attr('data-model'));
+		// Передаем Бренд в форму
+		//$('#rezerv-17-01-22 .popup-form__title .model-input').text($(this).attr('data-model')); // Передаем Модель в форму
+		let carImage = $(this).attr('data-img');
+		if (this.classList.contains('btn-reserve')) {
+			carImage = $('.car-card .card-carousel').length ? $('.card-carousel a.item img').attr('src') : $(this).attr('data-img');
+		}
+		if (carImage) {
+			if ($(this).parents('#pts').length && $(window).width < 599) {
+					$('#reserve-form img').hide();
+			} else {
+					$('#reserve-form img').show();
+			}
+			$('#reserve-form img').attr('src', carImage);
+		}
+		if (!!$(this).attr('data-equip')) {
+			$('#reserve-form .equip-input').text($(this).attr('data-equip'));
+			// Передаем Комплектацию в форму
+		} else {
+			$('#reserve-form .equip-input').hide();
+		}
+
+		if (!!$(this).attr('data-price')) {
+			$('#reserve-form .price-input').text($(this).attr('data-price'));
+			// Передаем Цену в форму
+		} else {
+			$('#reserve-form .price-input').hide();
+		}
+
+	});
+
+	// Кнопка отправка формы -Звонок
+	$('.btn-callback').on('click', function() {
+
+		if (!!$(this).data('title')) {
+			$('#callback-form .popup-form__title').text($(this).data('title'));
+			// Задаем название окна
+		}
+
+	});
+
+	// Кнопка отправка формы -Такси в кредит
+	$('.btn-reserve-taxi').on('click', function() {
+
+		if (!!$(this).data('title')) {
+			$('#taxi-reserve-form .popup-form__title').text($(this).data('title'));
+			// Задаем название окна
+		}
+
+		$('#taxi-reserve-form .taxi-auto-input').val($(this).data('taxi-auto'));
+		// Передаем Машину Такси в форму
+		$('#taxi-reserve-form .price-input').val($(this).data('price'));
+		// Передаем Цену в форму
+
+	});
+
+	// Кнопка Trade-in фиксированная
+	$('.trade-in-btn-fixed').on('click', function() {
+
+		if (!!$(this).data('title')) {
+			$('#trade-in-form .popup-form__title').text($(this).data('title'));
+			// Задаем название окна
+		}
+
+	});
+
 });
 
 
@@ -220,9 +410,51 @@ $(document).ready(function(){
 
 
 
+$(document).ready(function(){
+	$(".js-slider_vznos").ionRangeSlider({
+		grid: true,
+		grid_snap: false,
+		grid_num: 8,
+		min: 0,
+		max: 80,
+		from: 25,
+		postfix: "%",
+		onStart: function (data) {
+				$('input[name=vznos_prc]').prop("value", data.from );
+		},
+		onChange: function (data) {
+				$('input[name=vznos_prc]').prop("value", data.from);
+		}
+	});
+	
+	$(".js-slider_time").ionRangeSlider({
+		grid: true,
+		min: 6,
+		max: 96,
+		values: [6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, 78, 84, 90, 96],
+		from: 9,
+		postfix: " мес",
+	});
+
+	$('input[name=vznos_prc]').on("input", function () {
+		var val = $(this).prop("value");
+		if (val < 0) {
+				val = 0
+		} else if (val > 80) {
+				val = 80
+		}
+		$('input[name=vznos_prc]').prop("value", val);
+		$('input[name=vznos_rub]').prop("value", '');
+		var instance = $(".js-slider_vznos").data("ionRangeSlider");
+		instance.update({
+			from: val
+		});
 
 
 
 
+		
+	});
 
 
+});

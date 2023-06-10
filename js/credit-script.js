@@ -1,10 +1,3 @@
-
-
-$(document).ready(function () {
-
-    console.log('xxx2');
-});
-
 (function (window) {
 
     if (!!window.JSRsmCalc)
