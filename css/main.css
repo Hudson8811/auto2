@@ -4145,6 +4145,50 @@ element.style {}
 }
 
 
+.car-color-block {
+	vertical-align: top center;
+	display: block;
+	max-width: 550px;
+	margin: 0 auto;
+	min-height: 88px;
+}
+.rsm_calc .car-color-block {
+	margin-top: -40px;
+}
+.car-color-name,
+.car-color-name span {
+	font-weight: 300;
+	color: #fff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+.js-color-change {
+	display: inline-block;
+	vertical-align: top;
+}
+.js-color-change {
+	display: inline-block;
+	vertical-align: top;
+	box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.CD_CONTENT_params_R_block_color {
+	width: 55px;
+	height: 12px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	transition: all ease 0.2s;
+	cursor: pointer;
+	-webkit-box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: -3px 5px 10px rgba(0, 0, 0, 0.2);
+	-webkit-transform: skew(-20deg);
+	-moz-transform: skew(-20deg);
+	-o-transform: skew(-20deg);
+}
+
+
 
 
 

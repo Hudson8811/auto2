@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css" />
 	<link rel="stylesheet" type="text/css" href="css/slick.css" />
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/ion.rangeSlider.min.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -536,196 +537,66 @@
 							<div class="calc_second_block">
 
 								<div class="calc__wrap rsm_calc_build">
-
+								
 									<h4 class="calc__title">
 										2. Расчет кредита
 									</h4>
-
+								
 									<div class="rsm_calc_subtitle">Выберите кредитную программу</div>
 									<select id="credit-type" name="type" class="calc__select calc__select_type">
-										<option value="Марка Finance" data-id="129031" data-code="marka" data-percent="0"
-											data-stavka="1.9">Марка*Finance (ставка: 1.9%* )</option>
-										<option value="Первый автомобиль" data-id="129032" data-code="pervyy-avtomobil"
-											data-percent="20" data-stavka="1.6">
+										<option value="Марка Finance" data-id="129031" data-code="marka" data-percent="0" data-stavka="1.9">
+											Марка Finance (ставка: 1.9%* )
+										</option>
+										<option value="Первый автомобиль" data-id="129032" data-code="pervyy-avtomobil" data-percent="20"
+											data-stavka="1.6">
 											Первый автомобиль (скидка: 20%, ставка: 1.6%* )
 										</option>
-										<option value="Семейный автомобиль" data-id="129033" data-code="semeynyy-avtomobil"
-											data-percent="20" data-stavka="1.6">
+										<option value="Семейный автомобиль" data-id="129033" data-code="semeynyy-avtomobil" data-percent="20"
+											data-stavka="1.6">
 											Семейный автомобиль (скидка: 20%, ставка: 1.6%* )
 										</option>
-										<option value="Медицинский работник" data-id="129034" data-code="meditsinskiy-rabotnik"
-											data-percent="20" data-stavka="1.6">
+										<option value="Медицинский работник" data-id="129034" data-code="meditsinskiy-rabotnik" data-percent="20"
+											data-stavka="1.6">
 											Медицинский работник (скидка: 20%, ставка: 1.6%* )
 										</option>
 										<option value="Государственная программа льготного автокредитования" data-id="129035"
 											data-code="gosudarstvennaya-programma" data-percent="0" data-stavka="1.6">
 											Государственная программа льготного автокредитования (ставка: 1.6%* )
 										</option>
-										<option value="Стандартная кредитная программа" data-id="129036"
-											data-code="standartnaya-programma" data-percent="0" data-stavka="9.9">
+										<option value="Стандартная кредитная программа" data-id="129036" data-code="standartnaya-programma"
+											data-percent="0" data-stavka="9.9">
 											Стандартная кредитная программа (ставка: 9.9%* )
 										</option>
-										<option value="Рассрочка 0%" data-id="129045" data-code="rassrochka-0" data-percent=""
-											data-stavka="0">
+										<option value="Рассрочка 0%" data-id="129045" data-code="rassrochka-0" data-percent="" data-stavka="0">
 											Рассрочка 0% (ставка: 0%* )
 										</option>
 									</select>
-
-
+								
+								
 									<div class="calc_vznos_wrap">
 										<div class="rsm_calc_subtitle">Первоначальный взнос</div>
 										<div class="calc_vznos_fields">
 											<div class="rsm_inp_field_wrap">
-												<input type="text" class="rsm_input_field inp-p calc-contacts__input"
-													name="vznos_prc" placeholder="в процентах">
+												<input type="text" class="rsm_input_field inp-p calc-contacts__input" name="vznos_prc"
+													placeholder="в процентах">
 												<span class="rsm_inp_field_desc">%</span>
 											</div>
-
+								
 											<div class="rsm_inp_field_wrap">
-												<input type="text" class="rsm_input_field inp-p calc-contacts__input"
-													name="vznos_rub" placeholder="в рублях">
+												<input type="text" class="rsm_input_field inp-p calc-contacts__input" name="vznos_rub"
+													placeholder="в рублях">
 												<span class="rsm_inp_field_desc">руб.</span>
 											</div>
 										</div>
-
-										<span class="irs irs--flat js-irs-0  irs-with-grid"><span class="irs"><span
-													class="irs-line" tabindex="0"></span><span class="irs-min"
-													style="visibility: visible;">0%</span><span class="irs-max"
-													style="visibility: visible;">80%</span><span class="irs-from"
-													style="visibility: hidden;">0</span><span class="irs-to"
-													style="visibility: hidden;">0</span><span class="irs-single"
-													style="left: 28.1127%;">25%</span></span><span class="irs-grid"
-												style="width: 96.8627%; left: 1.46863%;"><span class="irs-grid-pol"
-													style="left: 0%"></span><span class="irs-grid-text js-grid-text-0"
-													style="left: 0%; margin-left: -1.27451%;">0</span><span
-													class="irs-grid-pol small" style="left: 8.333333333333332%"></span><span
-													class="irs-grid-pol small" style="left: 4.166666666666666%"></span><span
-													class="irs-grid-pol" style="left: 12.5%"></span><span
-													class="irs-grid-text js-grid-text-1"
-													style="left: 12.5%; visibility: visible; margin-left: -1.86275%;">10</span><span
-													class="irs-grid-pol small" style="left: 20.833333333333332%"></span><span
-													class="irs-grid-pol small" style="left: 16.666666666666664%"></span><span
-													class="irs-grid-pol" style="left: 25%"></span><span
-													class="irs-grid-text js-grid-text-2"
-													style="left: 25%; visibility: visible; margin-left: -1.86275%;">20</span><span
-													class="irs-grid-pol small" style="left: 33.333333333333336%"></span><span
-													class="irs-grid-pol small" style="left: 29.166666666666664%"></span><span
-													class="irs-grid-pol" style="left: 37.5%"></span><span
-													class="irs-grid-text js-grid-text-3"
-													style="left: 37.5%; visibility: visible; margin-left: -1.86275%;">30</span><span
-													class="irs-grid-pol small" style="left: 45.833333333333336%"></span><span
-													class="irs-grid-pol small" style="left: 41.666666666666664%"></span><span
-													class="irs-grid-pol" style="left: 50%"></span><span
-													class="irs-grid-text js-grid-text-4"
-													style="left: 50%; margin-left: -1.86275%;">40</span><span
-													class="irs-grid-pol small" style="left: 58.333333333333336%"></span><span
-													class="irs-grid-pol small" style="left: 54.166666666666664%"></span><span
-													class="irs-grid-pol" style="left: 62.5%"></span><span
-													class="irs-grid-text js-grid-text-5"
-													style="left: 62.5%; visibility: visible; margin-left: -1.86275%;">50</span><span
-													class="irs-grid-pol small" style="left: 70.83333333333333%"></span><span
-													class="irs-grid-pol small" style="left: 66.66666666666667%"></span><span
-													class="irs-grid-pol" style="left: 75%"></span><span
-													class="irs-grid-text js-grid-text-6"
-													style="left: 75%; visibility: visible; margin-left: -1.86275%;">60</span><span
-													class="irs-grid-pol small" style="left: 83.33333333333333%"></span><span
-													class="irs-grid-pol small" style="left: 79.16666666666667%"></span><span
-													class="irs-grid-pol" style="left: 87.5%"></span><span
-													class="irs-grid-text js-grid-text-7"
-													style="left: 87.5%; visibility: visible; margin-left: -1.86275%;">70</span><span
-													class="irs-grid-pol small" style="left: 95.83333333333333%"></span><span
-													class="irs-grid-pol small" style="left: 91.66666666666667%"></span><span
-													class="irs-grid-pol" style="left: 100%"></span><span
-													class="irs-grid-text js-grid-text-8"
-													style="left: 100%; margin-left: -1.86275%;">80</span></span><span
-												class="irs-bar irs-bar--single" style="left: 0px; width: 31.8382%;"></span><span
-												class="irs-shadow shadow-single" style="display: none;"></span><span
-												class="irs-handle single"
-												style="left: 30.2696%;"><i></i><i></i><i></i></span></span><input type="text"
-											class="rsm_tracker js-slider_vznos irs-hidden-input" name="calc_vznos" value=""
-											tabindex="-1" readonly="">
+								
+										<input type="text" class="rsm_tracker js-slider_vznos" name="calc_vznos" value="" />
 									</div>
-
+								
 									<div class="calc_vznos_wrap">
 										<div class="rsm_calc_subtitle">Срок кредита</div>
-										<span class="irs irs--flat js-irs-1  irs-with-grid"><span class="irs"><span
-													class="irs-line" tabindex="0"></span><span class="irs-min"
-													style="visibility: visible;">6 мес</span><span class="irs-max"
-													style="visibility: visible;">96 мес</span><span class="irs-from"
-													style="visibility: hidden;">0</span><span class="irs-to"
-													style="visibility: hidden;">0</span><span class="irs-single"
-													style="left: 54.3922%;">60 мес</span></span><span class="irs-grid"
-												style="width: 96.8627%; left: 1.46863%;"><span class="irs-grid-pol"
-													style="left: 0%"></span><span class="irs-grid-text js-grid-text-0"
-													style="left: 0%; margin-left: -1.27451%;">6</span><span
-													class="irs-grid-pol small" style="left: 3.3333333333333335%"></span><span
-													class="irs-grid-pol" style="left: 6.666666666666667%"></span><span
-													class="irs-grid-text js-grid-text-1"
-													style="left: 6.66667%; visibility: visible; margin-left: -1.86275%;">12</span><span
-													class="irs-grid-pol small" style="left: 10%"></span><span class="irs-grid-pol"
-													style="left: 13.333333333333334%"></span><span
-													class="irs-grid-text js-grid-text-2"
-													style="left: 13.3333%; visibility: visible; margin-left: -1.86275%;">18</span><span
-													class="irs-grid-pol small" style="left: 16.666666666666668%"></span><span
-													class="irs-grid-pol" style="left: 20%"></span><span
-													class="irs-grid-text js-grid-text-3"
-													style="left: 20%; visibility: visible; margin-left: -1.86275%;">24</span><span
-													class="irs-grid-pol small" style="left: 23.333333333333336%"></span><span
-													class="irs-grid-pol" style="left: 26.666666666666668%"></span><span
-													class="irs-grid-text js-grid-text-4"
-													style="left: 26.6667%; margin-left: -1.86275%;">30</span><span
-													class="irs-grid-pol small" style="left: 30%"></span><span class="irs-grid-pol"
-													style="left: 33.333333333333336%"></span><span
-													class="irs-grid-text js-grid-text-5"
-													style="left: 33.3333%; visibility: visible; margin-left: -1.86275%;">36</span><span
-													class="irs-grid-pol small" style="left: 36.66666666666667%"></span><span
-													class="irs-grid-pol" style="left: 40%"></span><span
-													class="irs-grid-text js-grid-text-6"
-													style="left: 40%; visibility: visible; margin-left: -1.86275%;">42</span><span
-													class="irs-grid-pol small" style="left: 43.333333333333336%"></span><span
-													class="irs-grid-pol" style="left: 46.66666666666667%"></span><span
-													class="irs-grid-text js-grid-text-7"
-													style="left: 46.6667%; visibility: visible; margin-left: -1.86275%;">48</span><span
-													class="irs-grid-pol small" style="left: 50%"></span><span class="irs-grid-pol"
-													style="left: 53.333333333333336%"></span><span
-													class="irs-grid-text js-grid-text-8"
-													style="left: 53.3333%; margin-left: -1.86275%;">54</span><span
-													class="irs-grid-pol small" style="left: 56.66666666666667%"></span><span
-													class="irs-grid-pol" style="left: 60%"></span><span
-													class="irs-grid-text js-grid-text-9"
-													style="left: 60%; visibility: visible; margin-left: -1.86275%;">60</span><span
-													class="irs-grid-pol small" style="left: 63.333333333333336%"></span><span
-													class="irs-grid-pol" style="left: 66.66666666666667%"></span><span
-													class="irs-grid-text js-grid-text-10"
-													style="left: 66.6667%; visibility: visible; margin-left: -1.86275%;">66</span><span
-													class="irs-grid-pol small" style="left: 70%"></span><span class="irs-grid-pol"
-													style="left: 73.33333333333334%"></span><span
-													class="irs-grid-text js-grid-text-11"
-													style="left: 73.3333%; visibility: visible; margin-left: -1.86275%;">72</span><span
-													class="irs-grid-pol small" style="left: 76.66666666666667%"></span><span
-													class="irs-grid-pol" style="left: 80%"></span><span
-													class="irs-grid-text js-grid-text-12"
-													style="left: 80%; margin-left: -1.86275%;">78</span><span
-													class="irs-grid-pol small" style="left: 83.33333333333334%"></span><span
-													class="irs-grid-pol" style="left: 86.66666666666667%"></span><span
-													class="irs-grid-text js-grid-text-13"
-													style="left: 86.6667%; visibility: visible; margin-left: -1.86275%;">84</span><span
-													class="irs-grid-pol small" style="left: 90%"></span><span class="irs-grid-pol"
-													style="left: 93.33333333333334%"></span><span
-													class="irs-grid-text js-grid-text-14"
-													style="left: 93.3333%; visibility: visible; margin-left: -1.86275%;">90</span><span
-													class="irs-grid-pol small" style="left: 96.66666666666667%"></span><span
-													class="irs-grid-pol" style="left: 100%"></span><span
-													class="irs-grid-text js-grid-text-15"
-													style="left: 100%; visibility: visible; margin-left: -1.86275%;">96</span></span><span
-												class="irs-bar irs-bar--single" style="left: 0px; width: 59.6863%;"></span><span
-												class="irs-shadow shadow-single" style="display: none;"></span><span
-												class="irs-handle single"
-												style="left: 58.1176%;"><i></i><i></i><i></i></span></span><input type="text"
-											class="rsm_tracker js-slider_time irs-hidden-input" name="calc_time" value=""
-											tabindex="-1" readonly="">
+										<input type="text" class="rsm_tracker js-slider_time" name="calc_time" value="" />
 									</div>
-
+								
 								</div>
 
 
@@ -1577,6 +1448,7 @@
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
 <script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/ion.rangeSlider.min.js"></script>
 <script
 	type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "98774825e6acd85aa17efae18dcbf80b"]); _ba.push(["host", "avantaauto.ru"]); (function() {var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true;ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ba, s);})();</script>
 
@@ -1671,6 +1543,7 @@
 
 
 
+<script type="text/javascript" src="js/credit-script.js"></script>
 <script type="text/javascript" src="js/_script.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/add-main.js"></script>
