@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="css/reset.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 
 <body>
@@ -112,9 +113,6 @@
 						<div class="container">
 							<div class="row">
 								<div class="col">
-									<a class="header-fixed__logo" href="/">
-										<img src="/local/templates/auto.2019/img/logo-sm.png" alt="">
-									</a>
 									<div class="header-top__left">
 										<a class="header-top__logo" href="/">
 											<img src="images/FAW logo.jpg" class="">
@@ -409,7 +407,6 @@
 		<div class="header_space"></div>
 
 	<div class="container bread-crumbs">
-		<link href="/bitrix/css/main/font-awesome.css?163645517428777" type="text/css" rel="stylesheet" />
 		<div class="bx-breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
 			<div class="bx-breadcrumb-item" id="bx_breadcrumb_0" itemprop="itemListElement" itemscope
 				itemtype="http://schema.org/ListItem">
@@ -495,7 +492,7 @@
 							<div class="hit-card__img">
 								<a href="/cars/kaiyi/kaiyi-e5/" title="E5">
 									<img src="images/product/car1.png" alt="E5"
-										data-img-hover="/upload/iblock/e83/90oag3zwjh0m2khajnz5r0wg0r5xuscn.png"
+										data-img-hover="/images/product/car1.png"
 										data-img-default="images/product/car1.png">
 								</a>
 							</div>
@@ -547,7 +544,7 @@
 							<div class="hit-card__img">
 								<a href="/cars/kaiyi/x3-pro/" title="X3 Pro">
 									<img src="images/product/car2.png" alt="X3 Pro"
-										data-img-hover="/upload/iblock/e8e/whhx0bwgqzst5bab3ak4yk5i7edijz63.png"
+										data-img-hover="/images/product/car1.png"
 										data-img-default="images/product/car2.png">
 								</a>
 							</div>
@@ -1020,29 +1017,9 @@
 		</div>
 	</section>
 
-	</ /script src="/local/components/auto.2019/order-call/templates/.default/js/order-call-post.js">
-	</script>
 
 
 
-	<div class="mobile-bar">
-		<div class="bottom_phone_mobile">
-			<a href="tel:88003330341"
-				style="width: 100%;color: #fff;text-decoration: none;justify-content: space-between;align-items: center;">
-				<div class="mc-bar"><span
-						style="display: inline-block;width: 110px;background-image: url(../bitrix/images/bottom_phone.png);background-position: left center;background-repeat: no-repeat;height: 24px;padding-left: 15px;">Позвонить<br>
-						8-800-333-03-41</span></div>
-			</a>
-		</div>
-		<div class="bottom_phone_mobile">
-			<a href="https://wa.me/79259881146?text=Здравствуйте!"
-				style="width: 100%;color: #fff;text-decoration: none;justify-content: space-between;align-items: center;">
-				<div class="mc-bar2"><span
-						style="display: inline-block;width: 110px;background-image: url(../bitrix/images/bottom_whatsapp.png);background-position: left center;background-repeat: no-repeat;height: 26px;">Написать<br>
-						в WhatsApp</span></div>
-			</a>
-		</div>
-	</div>
 
 
 
@@ -1338,13 +1315,11 @@
 
 
 
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script type="text/javascript" src="/bitrix/js/main/jquery/jquery-1.12.4.min.js?166063122497163"></script>
-<script type="text/javascript"
-	src="/bitrix/cache/js/s1/auto.2020/template_899ca4c1ecf09775b8df99b942387457/template_899ca4c1ecf09775b8df99b942387457_v1.js?1685959167267045"></script>
-<script type="text/javascript"
-	src="/bitrix/cache/js/s1/auto.2020/page_d3ad219e96bb375d24351886c9be8835/page_d3ad219e96bb375d24351886c9be8835_v1.js?168579055129016"></script>
+<script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>
+<script type="text/javascript" src="js/fancybox.umd.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script
 	type="text/javascript">var _ba = _ba || []; _ba.push(["aid", "98774825e6acd85aa17efae18dcbf80b"]); _ba.push(["host", "avantaauto.ru"]); (function () { var ba = document.createElement("script"); ba.type = "text/javascript"; ba.async = true; ba.src = (document.location.protocol == "https:" ? "https://" : "http://") + "bitrix.info/ba.js"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ba, s); })();</script>
 
@@ -1363,7 +1338,6 @@
 		webvisor: true
 	});
 </script>
-<script type="text/javascript" async src="/utm-js.php"></script>
 
 
 
@@ -1382,19 +1356,14 @@
 	})(document, window, "topmailru-code");
 </script>
 <script type="text/javascript">
-	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
-	})
-</script>
-<script type="text/javascript">
-		(function (d, w) {
-			var n = d.getElementsByTagName("script")[0],
-				s = d.createElement("script");
-			s.type = "text/javascript";
-			s.async = true;
-			s.src = "https://qoopler.ru/index.php?ref=" + d.referrer + "&page=" + encodeURIComponent(w.location.href);
-			n.parentNode.insertBefore(s, n);
-		})(document, window);
+	(function (d, w) {
+		var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script");
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = "https://qoopler.ru/index.php?ref=" + d.referrer + "&page=" + encodeURIComponent(w.location.href);
+		n.parentNode.insertBefore(s, n);
+	})(document, window);
 </script>
 <script type="text/javascript">
 	$(".choose-range__slide").slider({
@@ -1568,10 +1537,6 @@
 
 
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v52afc6f149f6479b8c77fa569edb01181681764108816"
-	integrity="sha512-jGCTpDpBAYDGNYR5ztKt4BQPGef1P0giN6ZGVUi835kFF88FOmmn8jBQWNgrNd8g/Yu421NdgWhwQoaOPFflDw=="
-	data-cf-beacon='{"rayId":"7d32a4de8f0eb47c","token":"7d33d493d7b94215a8eb5dc73a846095","version":"2023.4.0","si":100}'
-	crossorigin="anonymous"></script>
 
 
 
@@ -1597,14 +1562,7 @@
 
 
 
-
-
-
-<script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>
-<script type="text/javascript" src="js/fancybox.umd.js"></script>
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
-<script type="text/javascript" src="js/slick.min.js"></script>
+<script type="text/javascript" src="js/_script.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/add-main.js"></script>
 </body>

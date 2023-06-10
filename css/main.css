@@ -4907,7 +4907,9 @@ element.style {}
 
 
 
-
+.fa-angle-right:before {
+	content: ">";
+}
 
 
 
