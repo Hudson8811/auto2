@@ -206,6 +206,34 @@ $(document).ready(function(){
 			],
 		});
 	});
+
+/* $(document).ready(function(){
+  $(".js-slider_vznos").ionRangeSlider({
+      min: 0,
+      max: 100,
+      postfix: '%',
+      grid: true,
+      grid_margin: true,
+      grid_num: 100,
+      step: .5,
+      prettify_separator: true,
+      grid_snap: true,	
+  });
+  $(".js-slider_time").ionRangeSlider({
+      min: 0,
+      max: 100,
+      postfix: '%',
+      grid: true,
+      grid_margin: true,
+      grid_num: 100,
+      step: .5,
+      prettify_separator: true,
+      grid_snap: true,	
+  });
+}); */
+
+
+
 /*	$(document).ready(function () {
 		var e = {};
 		e.utm = ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "device", "region", "region_name"];

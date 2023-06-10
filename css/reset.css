@@ -323,8 +323,18 @@ h4 {
 
 
 
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-tap-highlight-color: transparent;
+	background: url(/local/templates/auto.2020/css/../img/calc/select-arrow.svg) right 15px center no-repeat #fff;
+	cursor: pointer;
+	display: block;
+	border: 1px solid #E1E1E1;
+}
 
-
-
+sup {
+	top: -0.5em;
+}
 
 
