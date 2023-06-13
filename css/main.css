@@ -7116,9 +7116,28 @@ h2.pts-title {
 	} 
 }
 
+.card-photoes-slider .slick-dots {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 25px;
+	width: 100%;
+}
 
 
 
+.card-photoes-slider .slick-dots li {
+	box-sizing: border-box;
+	border-radius: 50%;
+	width: 4px;
+	height: 4px;
+	background: #FFFFFF;
+	margin: 0 10px;
+	font-size: 0;
+}
+.card-photoes-slider .slick-dots li.slick-active {
+	background: #CF103C;
+}
 
 
 .car-pts-card__year {
