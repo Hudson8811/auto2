@@ -1,5 +1,5 @@
 @font-face {
-	font-family: ''Proxima Nova', sans-serif';
+	font-family: 'Proxima Nova', sans-serif;
 	src: url('../fonts/proximanova_black/proximanova_black.eot');
 	src: local('proximanova_black'), local('../fonts/proximanova_black/proximanova_black'),
 		url('../fonts/proximanova_black/proximanova_black.eot?#iefix') format('embedded-opentype'),
@@ -10,7 +10,7 @@
 	font-display: swap;
 }
 @font-face {
-	font-family: ''Proxima Nova', sans-serif';
+	font-family: 'Proxima Nova', sans-serif;
 	src: url('../fonts/proximanova_extrabold/proximanova_extrabold.eot');
 	src: local('proximanova_extrabold'), local('../fonts/proximanova_extrabold/proximanova_extrabold'),
 		url('../fonts/proximanova_extrabold/proximanova_extrabold.eot?#iefix') format('embedded-opentype'),
@@ -21,7 +21,7 @@
 	font-display: swap;
 }
 @font-face {
-	font-family: ''Proxima Nova', sans-serif';
+	font-family: 'Proxima Nova', sans-serif;
 	src: url('../fonts/proximanova_bold/proximanova_bold.eot');
 	src: local('proximanova_bold'), local('../fonts/proximanova_bold/proximanova_bold'),
 		url('../fonts/proximanova_bold/proximanova_bold.eot?#iefix') format('embedded-opentype'),
@@ -32,7 +32,7 @@
 	font-display: swap;
 }
 @font-face {
-	font-family: ''Proxima Nova', sans-serif';
+	font-family: 'Proxima Nova', sans-serif;
 	src: url('../fonts/proximanova_regular/proximanova_regular.eot');
 	src: local('proximanova_regular'), local('../fonts/proximanova_regular/proximanova_regular'),
 		url('../fonts/proximanova_regular/proximanova_regular.eot?#iefix') format('embedded-opentype'),
@@ -43,7 +43,7 @@
 	font-display: swap;
 }
 @font-face {
-	font-family: ''Proxima Nova', sans-serif';
+	font-family: 'Proxima Nova', sans-serif;
 	src: url('../fonts/proximanova_light/proximanova_light.eot');
 	src: local('proximanova_light'), local('../fonts/proximanova_light/proximanova_light'),
 		url('../fonts/proximanova_light/proximanova_light.eot?#iefix') format('embedded-opentype'),
