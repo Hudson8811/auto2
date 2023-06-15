@@ -4,7 +4,7 @@
 	src: local('proximanova_black'), local('../fonts/proximanova_black/proximanova_black'),
 		url('../fonts/proximanova_black/proximanova_black.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/proximanova_black/proximanova_black.woff') format('woff'),
-		url('../fonts/proximanova_black/proximanova_black.otf') format('truetype');
+		url('../fonts/proximanova_black/proximanova_black.ttf') format('truetype');
 	font-weight: 900;
 	font-style: normal;
 	font-display: swap;
@@ -15,7 +15,7 @@
 	src: local('proximanova_extrabold'), local('../fonts/proximanova_extrabold/proximanova_extrabold'),
 		url('../fonts/proximanova_extrabold/proximanova_extrabold.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/proximanova_extrabold/proximanova_extrabold.woff') format('woff'),
-		url('../fonts/proximanova_extrabold/proximanova_extrabold.otf') format('truetype');
+		url('../fonts/proximanova_extrabold/proximanova_extrabold.ttf') format('truetype');
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
@@ -26,7 +26,7 @@
 	src: local('proximanova_bold'), local('../fonts/proximanova_bold/proximanova_bold'),
 		url('../fonts/proximanova_bold/proximanova_bold.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/proximanova_bold/proximanova_bold.woff') format('woff'),
-		url('../fonts/proximanova_bold/proximanova_bold.otf') format('truetype');
+		url('../fonts/proximanova_bold/proximanova_bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -37,7 +37,7 @@
 	src: local('proximanova_regular'), local('../fonts/proximanova_regular/proximanova_regular'),
 		url('../fonts/proximanova_regular/proximanova_regular.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/proximanova_regular/proximanova_regular.woff') format('woff'),
-		url('../fonts/proximanova_regular/proximanova_regular.otf') format('truetype');
+		url('../fonts/proximanova_regular/proximanova_regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -48,7 +48,7 @@
 	src: local('proximanova_light'), local('../fonts/proximanova_light/proximanova_light'),
 		url('../fonts/proximanova_light/proximanova_light.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/proximanova_light/proximanova_light.woff') format('woff'),
-		url('../fonts/proximanova_light/proximanova_light.otf') format('truetype');
+		url('../fonts/proximanova_light/proximanova_light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 	font-display: swap;
